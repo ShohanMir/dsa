@@ -9,10 +9,10 @@ class Node {
 		Node* next; // pointer to the next node
 
 		// default constructor
-		Node () {
-			data = 0;
-			next = NULL;
-		}
+		// Node () {
+		// 	data = 0;
+		// 	next = NULL;
+		// }
 
 		// parameterised constructor
 		Node(int data) {
@@ -25,6 +25,7 @@ class Node {
 
 class Linkedlist {
 	Node* head; // head of the linked list
+	// Node* head means the head of the linked list and return the head pointer 
 
 	public:
 		// default constructor

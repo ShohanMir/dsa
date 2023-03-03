@@ -129,7 +129,7 @@ int main() {
     
     Deque dq(5);
 
-    cout << "Insert element at rear end  : 5 \n";
+    cout << "Insert element at rear end d : 5 \n";
     dq.insertRear(5);
  
     cout << "insert element at rear end : 10 \n";

@@ -32,4 +32,6 @@ class Solution {
 
             return head->next;
         }
-}
+};
+
+// Driver function

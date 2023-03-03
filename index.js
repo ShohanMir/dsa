@@ -355,34 +355,72 @@
 
 // Nested loop
 
-function loop(s) {
-  let i, j;
-  for (i = 0; i < s.length; i++) {
-    for (j = i; j < s.length; j++) {
-      for (let k = 0; k < (j - i + 1) / 2; k++)
-        // if (s[i + k] != s[j - k]) flag = 0;
-        // console.log(i + k);
-        // console.log(s[i + k]);
-        console.log(s[j - k]);
-      // let flag = 1;
-      // for (let k = 0; k < (j - i + 1) / 2; k++)
-      //         if (s[i + k] != s[j - k])
-      //             flag = 0;
-      //     // Palindrome
-      //     if (flag!=0 && (j - i + 1) > maxLength) {
-      //         start = i;
-      //         maxLength = j - i + 1;
-    }
-    // console.log((j - i + 1) / 2); // 1/2 is the middle of the string
-    // console.log('Breaking point');
-    // console.log(j - i + 1);
-    // console.log('Breaking point');
-    // console.log(j - i);
-    // console.log('Breaking point');
-    // console.log(i);
-    // console.log('Breaking point');
-    // console.log(j);
+// function loop(s) {
+//   let i, j;
+//   for (i = 0; i < s.length; i++) {
+//     for (j = i; j < s.length; j++) {
+//       for (let k = 0; k < (j - i + 1) / 2; k++)
+//         // if (s[i + k] != s[j - k]) flag = 0;
+//         // console.log(i + k);
+//         // console.log(s[i + k]);
+//         console.log(s[j - k]);
+// let flag = 1;
+// for (let k = 0; k < (j - i + 1) / 2; k++)
+//         if (s[i + k] != s[j - k])
+//             flag = 0;
+//     // Palindrome
+//     if (flag!=0 && (j - i + 1) > maxLength) {
+//         start = i;
+//         maxLength = j - i + 1;
+// }
+// console.log((j - i + 1) / 2); // 1/2 is the middle of the string
+// console.log('Breaking point');
+// console.log(j - i + 1);
+// console.log('Breaking point');
+// console.log(j - i);
+// console.log('Breaking point');
+// console.log(i);
+// console.log('Breaking point');
+// console.log(j);
+//   }
+// }
+
+// loop('geeksforgeeks');
+
+// palindrom check
+
+function solution(x) {
+  // let res = [];
+  let res =
+    parseFloat(x.toString().split('').reverse().join('')) * Math.sign(x);
+  if (res === x) {
+    return true;
+  } else {
+    return false;
   }
 }
 
-loop('geeksforgeeks');
+console.log(solution(10));
+
+// another way check palindrom
+
+function solutionll(x) {
+  let len = x.length;
+  if (len < 2) {
+    return true;
+  }
+  let i = 0,
+    j = len - 1;
+  // console.log(j);
+  while (i < j) {
+    if (s[i] != s[j]) {
+      return false;
+    }
+    i += 1;
+    j -= 1;
+  }
+  return true;
+}
+
+let pal = solutionll(101);
+console.log(pal);
